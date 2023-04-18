@@ -19,6 +19,13 @@
       padding: 2em;
       margin:2em;
       background: hsl(0, 0%, 86%);
+      height:100vh;
+      width:100vw;
+    }
+    .container{
+      width:60%;
+      height:60%;
+      background: hsl(0, 0%, 94%);
     }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -27,20 +34,27 @@
 <body>
     <div class="container">
       <div class="flexbox">
-        <div class="box1">
-        Day
-        DD
-        </div>
-        <div class="box2">
-        Month
-        MM
-        </div>
-        <div class="box3">
-        Year
-        YYYY
-        </div>
-        <hr>
+        <form>
+          <div class="box1">
+              <label>DAY</label>
+              <input type="text" placeholder="DD">
+              <p id="error-el"></p>
+          </div>
+          <div class="box2">
+              <label>MONTH</label>
+              <input type="text" placeholder="MM">
+              <p id="error-el"></p> 
+          </div>
+          <div class="box3">
+              <label>YEAR</label>
+              <input type="text" placeholder="YYYY"> 
+              <p id="error-el"></p>
+          </div>
+        </form>
+    
       </div>
+        <hr>
+      
         -- years
         -- months
         -- days
