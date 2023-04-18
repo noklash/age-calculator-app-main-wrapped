@@ -26,6 +26,19 @@
       width:60%;
       height:60%;
       background: hsl(0, 0%, 94%);
+ 
+    }
+    .flexbox{
+      display: flex;
+      flex-direction: column;
+    }
+    .box{
+      display: flex;
+      flex-direction: column;
+    }
+    .input-el{
+      width: 4.5em;
+      height: 2.5em;
     }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -35,25 +48,29 @@
     <div class="container">
       <div class="flexbox">
         <form>
-          <div class="box1">
+          <div class="box">
               <label>DAY</label>
-              <input type="text" placeholder="DD">
+              <input class="input-el" type="text" placeholder="DD">
               <p id="error-el"></p>
           </div>
-          <div class="box2">
+          <div class="box">
               <label>MONTH</label>
-              <input type="text" placeholder="MM">
+              <input class="input-el" type="text" placeholder="MM">
               <p id="error-el"></p> 
           </div>
-          <div class="box3">
+          <div class="box">
               <label>YEAR</label>
-              <input type="text" placeholder="YYYY"> 
+              <input class="input-el" type="text" placeholder="YYYY"> 
               <p id="error-el"></p>
           </div>
         </form>
-    
+        <div>
+          
+          <!-- -->
+          <hr>
+        </div>
       </div>
-        <hr>
+        
       
         -- years
         -- months
