@@ -40,7 +40,28 @@
     .child{
       display: flex;
       flex-direction: column;
-      margin-bottom: 4em;
+      margin-bottom: 3em;
+    }
+    .hr-div{
+      display: flex;
+      flex-direction: row;
+    }
+    hr{
+      width: 70%;
+    }
+    .button{
+      border-radius: 50%;
+      background: hsl(259, 100%, 65%);
+      border: none;
+      position: relative;
+      display: inline-block;
+      top: -20px;
+      /* width: 30px;
+      height:30px; */
+    }
+    svg{
+      /* margin: 2px; */
+      padding: 10px;
     }
     .output{
       
@@ -80,11 +101,9 @@
             </div>
           </div>
         </form>
-        <div>
-          
-          <!-- -->
+        <div class="hr-div">
           <hr>
-          <button type="submit">
+          <button class="button" type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" 
               width="46" height="44" viewBox="0 0 46 44">
               <g fill="none" stroke="#FFF" stroke-width="2">
