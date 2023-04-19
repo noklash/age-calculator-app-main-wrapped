@@ -33,6 +33,10 @@
       flex-direction: column;
     }
     .box{
+      display: inline-block;
+      /* flex-direction: column; */
+    }
+    .child{
       display: flex;
       flex-direction: column;
     }
@@ -49,19 +53,25 @@
       <div class="flexbox">
         <form>
           <div class="box">
-              <label>DAY</label>
-              <input class="input-el" type="text" placeholder="DD">
-              <p id="error-el"></p>
+              <div class="child">
+                <label>DAY</label>
+                <input class="input-el" type="text" placeholder="DD">
+                <p id="error-el"></p>
+              </div>
           </div>
           <div class="box">
+            <div class="child">
               <label>MONTH</label>
               <input class="input-el" type="text" placeholder="MM">
-              <p id="error-el"></p> 
+              <p id="error-el"></p>
+            </div> 
           </div>
           <div class="box">
+            <div class="child">
               <label>YEAR</label>
               <input class="input-el" type="text" placeholder="YYYY"> 
               <p id="error-el"></p>
+            </div>
           </div>
         </form>
         <div>
