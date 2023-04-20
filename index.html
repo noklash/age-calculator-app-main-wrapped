@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,200&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -21,6 +22,7 @@
       background: hsl(0, 0%, 86%);
       height:100vh;
       width:100vw;
+      font-family: poppins;
       
     }
     .container{
@@ -36,6 +38,7 @@
     }
     .box{
       display: inline-block;
+      
       /* flex-direction: column; */
     }
     .child{
@@ -67,12 +70,22 @@
       padding: 10px;
     }
     .output{
+      font-size: 32px;
       
+    }
+    p{
+      font-weight: 800;
+    }
+    .output-span{
+      color:hsl(259, 100%, 65%);
+      font-weight: 700;
+      padding: 5px;
     }
     .input-el{
       width: 4.5em;
       height: 2em;
       margin-right: 7px;
+      
     }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -118,14 +131,15 @@
       </div>
         
       <div class="output">
-        <p>-- years</p>
-        <p>-- months</p>
-        <p>-- days</p>
+        <p><span class="output-span">--</span> years</p>
+        <p><span class="output-span">--</span> months</p>
+        <p><span class="output-span">--</span> days</p>
       </div>
     </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
