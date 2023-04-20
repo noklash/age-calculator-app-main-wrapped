@@ -12,8 +12,10 @@ const error = document.getElementsByClassName("error")
 const dayLab = document.getElementById("day-lab")
 const monthLab = document.getElementById("month-lab")
 const yearLab = document.getElementById("year-lab")
-let currentTime = new Date()
-let currentYear = currentTime.getFullYear()
+let currTime = new Date()
+let currYear = currTime.getFullYear()
+let currMonth = currTime.getMonth()
+let currDay = currTime.getDate()
 
 
 
