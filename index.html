@@ -22,7 +22,7 @@
       background: hsl(0, 0%, 86%);
       height:100vh;
       width:100vw;
-      font-family: poppins;
+      
       
     }
     .container{
@@ -40,13 +40,20 @@
     
     .box{
       display: inline-block;
+      font-size: 0.4em;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 1.5px;
+      color: hsl(0, 1%, 44%)
+    }
+    label{
+      padding-bottom: 5px;
       
-      /* flex-direction: column; */
     }
     .child{
       display: flex;
       flex-direction: column;
-      margin-bottom: 1.5em;
+      margin-bottom: 4.5em;
     }
     .hr-div{
       display: inline;
@@ -75,6 +82,7 @@
     }
     .output{
       font-size: 32px;
+      font-family: poppins;
       
     }
     p{
@@ -89,8 +97,10 @@
     .input-el{
       width: 4.5em;
       height: 2em;
+      padding: 5px;
       margin-right: 7px;
-      border-radius:2px;
+      font-weight: bold;
+      border-radius:3px;
       border: 1px solid hsl(0, 0%, 86%);
       
     }
@@ -105,42 +115,42 @@
           <div class="box">
               <div class="child">
                 <label>DAY</label>
-                <input class="input-el" type="text" placeholder="DD">
+                <input id="day-el" class="input-el" type="number"  placeholder="DD" required>
                 <p id="error-el"></p>
               </div>
           </div>
           <div class="box">
             <div class="child">
-              <label>MONTH</label>
-              <input class="input-el" type="text" placeholder="MM">
+              <label for="month">MONTH</label>
+              <input id="month-el" class="input-el" type="number" placeholder="MM" required>
               <p id="error-el"></p>
             </div> 
           </div>
           <div class="box">
             <div class="child">
               <label>YEAR</label>
-              <input class="input-el" type="text" placeholder="YYYY"> 
+              <input id="year-el" class="input-el" type="number" placeholder="YYYY" required> 
               <p id="error-el"></p>
             </div>
           </div>
-        </form>
+        
         <div class="hr-div">
           <hr>
-          <button class="button" type="submit">
+          <button id="submit-btn" class="button" type="submit" value="submit">
             <svg xmlns="http://www.w3.org/2000/svg" 
               width="46" height="44" viewBox="0 0 46 44">
               <g fill="none" stroke="#FFF" stroke-width="2">
               <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g>
           </svg>
         </button>
-        
+      </form>
         </div>
       </div>
         
       <div class="output">
-        <p><span class="output-span">--</span> years</p>
-        <p><span class="output-span">--</span> months</p>
-        <p><span class="output-span">--</span> days</p>
+        <p><span id="year-output" class="output-span">--</span> years</p>
+        <p><span id="month-output" class="output-span">--</span> months</p>
+        <p><span id="day-output" class="output-span">--</span> days</p>
       </div>
     </div>
   <div class="attribution">
