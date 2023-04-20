@@ -17,9 +17,13 @@ let currentYear = currentTime.getFullYear()
 
 
 
-function day(){
+function dayErr(){
     if(dayEl.value <= 31){
         dayError.innerHTML = ""
+     }else if (dayEl.value === ""){
+        dayError.innerHTML = "This field cannot be blank"
+        dayEl.style.borderColor = "red";
+        dayLab.style.color = "red";
      }else  {
        dayError.innerHTML = "Must be a valid day"
        dayEl.style.borderColor = "red";
@@ -27,9 +31,13 @@ function day(){
      }
 }
 
-function month(){
+function monthErr(){
     if (monthEl.value <= 12){
         monthError.innerHTML = ""
+    }else if(monthEl.value === ""){
+        monthError.innerHTML = "This field cannot be blank"
+        monthEl.style.borderColor = "red";
+        monthLab.style.color = "red";
     }else{
         monthError.innerHTML = "Must be a valid month"
         monthEl.style.borderColor = "red";
@@ -37,10 +45,15 @@ function month(){
     }
 }
 
-function year(){
+function yearErr(){
     if (yearEl.value <= currentYear){
         yearError.innerHTML = ""
-    }else {
+    }else if (yearEl.value === ""){
+        yearError.innerHTML = "This field cannot be empty"
+        yearEl.style.borderColor = "red";
+        yearLab.style.color = "red";
+    }
+    else {
         yearError.innerHTML = "Must be in the past"
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
