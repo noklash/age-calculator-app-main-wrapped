@@ -62,4 +62,31 @@ function yearErr(){
 
     }
 }
+
+function run(){
+    dayErr()
+    monthErr()
+    yearErr()
+    if (dayEl.value === currDay && monthEl.value === currDay){
+        yearOutput.innerHTML = currYear - yearEl.value;
+        monthOutput.innerHTML = 0;
+        dayOutput.innerHTML = 0;
+    }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
+        yearOutput.innerHTML = currYear - yearEl.value;
+        monthOutput.innerHTML = currMonth - monthEl.value;
+        dayOutput.innerHTML = currDay - dayEl.value;
+    }else if (monthEl.value > currMonth && dayEl.value > currDay){
+        yearOutput.innerHTML = currYear - yearEl.value - 1 
+        monthOutput.innerHTML = 12 - monthEl.value + currDay
+        dayOutput.innerHTML = dayEl.value - currDay
+    }else if (monthEl.value > currMonth && dayEl.value < currDay){
+        yearOutput.innerHTML = currYear - yearEl.value -1
+        monthOutput.innerHTML = 12 - monthEl.value + currMonth
+        dayOutput.innerHTML = currDay - dayEl.value
+    }else (monthEl.value < currMonth && dayEl.value > currDay){
+        yearOutput.innerHTML = currYear - yearEl.value
+        monthOutput.innerHTML = currMonth - monthEl.value
+        dayOutput.innerHTML = dayEl.value - currDay
+    }
+}
  
