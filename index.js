@@ -84,7 +84,10 @@ function run(){
         dayErr()
         monthErr()
         yearErr()
-        
+    }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
+        yearOutput.innerHTML = ""
+        monthOutput.innerHTML = ""
+        dayOutput.innerHTML = ""  
     }else if (dayEl.value === currDay && monthEl.value === currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = 0;
@@ -106,10 +109,6 @@ function run(){
         yearOutput.innerHTML = currYear - yearEl.value
         monthOutput.innerHTML = currMonth - monthEl.value 
         dayOutput.innerHTML = dayEl.value - currDay
-    }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
-        yearOutput.innerHTML += ""
-        monthOutput.innerHTML += ""
-        dayOutput.innerHTML += ""
     }
 }
  
