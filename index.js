@@ -48,7 +48,7 @@ function monthErr(){
 }
 
 function yearErr(){
-    if (yearEl.value <= currentYear){
+    if (yearEl.value <= currYear){
         yearError.innerHTML = ""
     }else if (yearEl.value === ""){
         yearError.innerHTML = "This field cannot be empty"
