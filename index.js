@@ -92,20 +92,24 @@ function run(){
         
     }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
-        monthOutput.innerHTML = currMonth - monthEl.value;
+        monthOutput.innerHTML = currMonth - monthEl.value + 1
         dayOutput.innerHTML = currDay - dayEl.value;
     }else if (monthEl.value > currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value - 1 
-        monthOutput.innerHTML = 12 - monthEl.value + currMonth
+        monthOutput.innerHTML = 12 - monthEl.value + currMonth 
         dayOutput.innerHTML = dayEl.value - currDay
     }else if (monthEl.value > currMonth && dayEl.value < currDay){
         yearOutput.innerHTML = currYear - yearEl.value -1
-        monthOutput.innerHTML = 12 - monthEl.value + currMonth
+        monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
         dayOutput.innerHTML = currDay - dayEl.value
-    }else{
+    }else if (monthEl.value < currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value
-        monthOutput.innerHTML = currMonth - monthEl.value
+        monthOutput.innerHTML = currMonth - monthEl.value 
         dayOutput.innerHTML = dayEl.value - currDay
+    }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
+        yearOutput.innerHTML += ""
+        monthOutput.innerHTML += ""
+        dayOutput.innerHTML += ""
     }
 }
  
