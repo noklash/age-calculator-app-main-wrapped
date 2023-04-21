@@ -89,14 +89,14 @@ function run(){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = 0;
         dayOutput.innerHTML = 0;
-        console.log("it worked")
+        
     }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = currMonth - monthEl.value;
         dayOutput.innerHTML = currDay - dayEl.value;
     }else if (monthEl.value > currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value - 1 
-        monthOutput.innerHTML = 12 - monthEl.value + currDay
+        monthOutput.innerHTML = 12 - monthEl.value + currMonth
         dayOutput.innerHTML = dayEl.value - currDay
     }else if (monthEl.value > currMonth && dayEl.value < currDay){
         yearOutput.innerHTML = currYear - yearEl.value -1
