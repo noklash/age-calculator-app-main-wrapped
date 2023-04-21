@@ -85,9 +85,9 @@ function run(){
         monthErr()
         yearErr()
     }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
-        yearOutput.innerHTML = ""
-        monthOutput.innerHTML = ""
-        dayOutput.innerHTML = ""  
+        yearOutput.innerHTML += ""
+        monthOutput.innerHTML += ""
+        dayOutput.innerHTML += ""  
     }else if (dayEl.value === currDay && monthEl.value === currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = 0;
