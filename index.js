@@ -26,10 +26,12 @@ function dayErr(){
         dayError.innerHTML = "This field cannot be blank"
         dayEl.style.borderColor = "red";
         dayLab.style.color = "red";
+        dayOutput.innerHTML += ""
      }else  {
        dayError.innerHTML = "Must be a valid day"
        dayEl.style.borderColor = "red";
        dayLab.style.color = "red";
+       dayOutput.innerHTML += ""
      }
 }
 
@@ -40,10 +42,12 @@ function monthErr(){
         monthError.innerHTML = "This field cannot be blank"
         monthEl.style.borderColor = "red";
         monthLab.style.color = "red";
+        monthOutput.innerHTML += ""
     }else{
         monthError.innerHTML = "Must be a valid month"
         monthEl.style.borderColor = "red";
         monthLab.style.color = "red";
+        monthOutput.innerHTML += ""
     }
 }
 
@@ -54,11 +58,13 @@ function yearErr(){
         yearError.innerHTML = "This field cannot be empty"
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
+        yearOutput.innerHTML += ""
     }
     else {
         yearError.innerHTML = "Must be in the past"
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
+        yearOutput.innerHTML += ""
 
     }
 }
@@ -67,7 +73,11 @@ function run(){
     dayErr()
     monthErr()
     yearErr()
-    if (dayEl.value === currDay && monthEl.value === currDay){
+    if (dayEl.value === "" || monthEl.value === "" || yearEl.value === ""){
+        dayErr()
+        monthErr()
+        yearErr()
+    }else if (dayEl.value === currDay && monthEl.value === currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = 0;
         dayOutput.innerHTML = 0;
