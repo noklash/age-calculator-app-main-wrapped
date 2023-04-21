@@ -22,6 +22,7 @@ let currDay = currTime.getDate()
 
 
 function run(){
+    
     event.preventDefault()
     const dayEl = document.getElementById("day-el")
     const monthEl = document.getElementById("month-el")
@@ -110,5 +111,6 @@ function run(){
         monthOutput.innerHTML = currMonth - monthEl.value 
         dayOutput.innerHTML = dayEl.value - currDay
     }
+
 }
  
