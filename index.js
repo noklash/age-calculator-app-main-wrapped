@@ -89,10 +89,10 @@ function run(){
         yearOutput.innerHTML += ""
         monthOutput.innerHTML += ""
         dayOutput.innerHTML += ""  
-    }else if (dayEl.value === currDay || monthEl.value === currMonth){
-        yearOutput.innerHTML = currYear - yearEl.value ;
-        monthOutput.innerHTML = monthEl.value - currMonth;
-        dayOutput.innerHTML = 0;   
+    }else if (dayEl.value === currDay && monthEl.value === currMonth){
+        yearOutput.innerHTML = currYear - yearEl.value + 1;
+        monthOutput.innerHTML = monthEl.value - currMonth ;
+        dayOutput.innerHTML = 0; 
     }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = currMonth - monthEl.value + 1
