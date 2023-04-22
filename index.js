@@ -100,7 +100,7 @@ function run(){
     }else if (monthEl.value > currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value - 1 
         monthOutput.innerHTML = 12 - monthEl.value + currMonth 
-        dayOutput.innerHTML =  currDay
+        dayOutput.innerHTML =  31 - dayEl.value + currDay
     }else if (monthEl.value > currMonth && dayEl.value < currDay){
         yearOutput.innerHTML = currYear - yearEl.value -1
         monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
