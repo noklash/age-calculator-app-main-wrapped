@@ -96,7 +96,7 @@ function run(){
     }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
         yearOutput.innerHTML = currYear - yearEl.value;
         monthOutput.innerHTML = currMonth - monthEl.value + 1
-        dayOutput.innerHTML = currDay - dayEl.value;
+        dayOutput.innerHTML = currDay - dayEl.value; 
     }else if (monthEl.value > currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value - 1 
         monthOutput.innerHTML = 12 - monthEl.value + currMonth 
