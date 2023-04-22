@@ -89,9 +89,9 @@ function run(){
         yearOutput.innerHTML += ""
         monthOutput.innerHTML += ""
         dayOutput.innerHTML += ""  
-    }else if (dayEl.value === currDay && monthEl.value === currDay){
-        yearOutput.innerHTML = currYear - yearEl.value;
-        monthOutput.innerHTML = 0;
+    }else if (dayEl.value === currDay || monthEl.value === currMonth || monthEl.value > currMonth){
+        yearOutput.innerHTML = currYear - yearEl.value ;
+        monthOutput.innerHTML = monthEl.value - currMonth;
         dayOutput.innerHTML = 0;
         
     }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
@@ -101,7 +101,7 @@ function run(){
     }else if (monthEl.value > currMonth && dayEl.value > currDay){
         yearOutput.innerHTML = currYear - yearEl.value - 1 
         monthOutput.innerHTML = 12 - monthEl.value + currMonth 
-        dayOutput.innerHTML = dayEl.value - currDay
+        dayOutput.innerHTML =  currDay
     }else if (monthEl.value > currMonth && dayEl.value < currDay){
         yearOutput.innerHTML = currYear - yearEl.value -1
         monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
@@ -110,6 +110,10 @@ function run(){
         yearOutput.innerHTML = currYear - yearEl.value
         monthOutput.innerHTML = currMonth - monthEl.value 
         dayOutput.innerHTML = dayEl.value - currDay
+    }else if(monthEl.value === currMonth && dayEl.value > currDay){
+        yearOutput.innerHTML = currYear - yearEl.value
+        monthOutput.innerHTML = currMonth - monthEl.value
+        dayOutput.innerHTML = currDay
     }
 
 }
