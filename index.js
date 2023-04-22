@@ -89,7 +89,7 @@ function run(){
         yearOutput.innerHTML += ""
         monthOutput.innerHTML += ""
         dayOutput.innerHTML += ""  
-    }else if (dayEl.value === currDay || monthEl.value === currMonth || monthEl.value > currMonth){
+    }else if (dayEl.value === currDay || monthEl.value === currMonth){
         yearOutput.innerHTML = currYear - yearEl.value ;
         monthOutput.innerHTML = monthEl.value - currMonth;
         dayOutput.innerHTML = 0;
