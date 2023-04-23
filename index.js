@@ -20,7 +20,7 @@ let currDay = currTime.getDate()
 let blankErrMsg = "This field cannot be empty"
 let invdMonth = "Must be a valid month"
 let invdDay = "Must be a valid day"
-let invdYear = "Must be a valid year"
+let invdYear = "Must be in the past"
 
 
 
@@ -171,7 +171,7 @@ function run(){
             yearError.innerHTML = invdYear
         }
     }
-    
+
     invalidInput()
     
     
