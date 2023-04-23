@@ -28,54 +28,74 @@ function run(){
     const monthEl = document.getElementById("month-el")
     const yearEl = document.getElementById("year-el")
 
+    // function dayErr(){
+    //     if(dayEl.value <= 31){
+    //         dayError.innerHTML = ""
+    //      }else if (dayEl.value === ""){
+    //         dayError.innerHTML = "This field cannot be blank"
+    //         dayEl.style.borderColor = "red";
+    //         dayLab.style.color = "red";
+    //         dayOutput.innerHTML += ""
+    //      }else  {
+    //        dayError.innerHTML = "Must be a valid day"
+    //        dayEl.style.borderColor = "red";
+    //        dayLab.style.color = "red";
+    //        dayOutput.innerHTML += ""
+    //      }
+    // }
+    
+    // function monthErr(){
+    //     if (monthEl.value <= 12){
+    //         monthError.innerHTML = ""
+    //     }else if(monthEl.value === ""){
+    //         monthError.innerHTML = "This field cannot be blank"
+    //         monthEl.style.borderColor = "red";
+    //         monthLab.style.color = "red";
+    //         monthOutput.innerHTML += ""
+    //     }else{
+    //         monthError.innerHTML = "Must be a valid month"
+    //         monthEl.style.borderColor = "red";
+    //         monthLab.style.color = "red";
+    //         monthOutput.innerHTML += ""
+    //     }
+    // }
+    
+    // function yearErr(){
+    //     if (yearEl.value <= currYear){
+    //         yearError.innerHTML = ""
+    //     }else if (yearEl.value === ""){
+    //         yearError.innerHTML = "This field cannot be empty"
+    //         yearEl.style.borderColor = "red";
+    //         yearLab.style.color = "red";
+    //         yearOutput.innerHTML += ""
+    //     }
+    //     else {
+    //         yearError.innerHTML = "Must be in the past"
+    //         yearEl.style.borderColor = "red";
+    //         yearLab.style.color = "red";
+    //         yearOutput.innerHTML += ""
+    
+    //     }
+    // }
     function dayErr(){
-        if(dayEl.value <= 31){
-            dayError.innerHTML = ""
-         }else if (dayEl.value === ""){
-            dayError.innerHTML = "This field cannot be blank"
-            dayEl.style.borderColor = "red";
-            dayLab.style.color = "red";
-            dayOutput.innerHTML += ""
-         }else  {
-           dayError.innerHTML = "Must be a valid day"
-           dayEl.style.borderColor = "red";
-           dayLab.style.color = "red";
-           dayOutput.innerHTML += ""
-         }
+        dayError.innerHTML = "This field cannot be blank"
+        dayEl.style.borderColor = "red";
+        dayLab.style.color = "red";
+        dayOutput.innerHTML += "" 
     }
-    
+
     function monthErr(){
-        if (monthEl.value <= 12){
-            monthError.innerHTML = ""
-        }else if(monthEl.value === ""){
-            monthError.innerHTML = "This field cannot be blank"
-            monthEl.style.borderColor = "red";
-            monthLab.style.color = "red";
-            monthOutput.innerHTML += ""
-        }else{
-            monthError.innerHTML = "Must be a valid month"
-            monthEl.style.borderColor = "red";
-            monthLab.style.color = "red";
-            monthOutput.innerHTML += ""
-        }
+        monthError.innerHTML = "This field cannot be blank"
+        monthEl.style.borderColor = "red";
+        monthLab.style.color = "red";
+        monthOutput.innerHTML += ""
     }
-    
+
     function yearErr(){
-        if (yearEl.value <= currYear){
-            yearError.innerHTML = ""
-        }else if (yearEl.value === ""){
-            yearError.innerHTML = "This field cannot be empty"
-            yearEl.style.borderColor = "red";
-            yearLab.style.color = "red";
-            yearOutput.innerHTML += ""
-        }
-        else {
-            yearError.innerHTML = "Must be in the past"
-            yearEl.style.borderColor = "red";
-            yearLab.style.color = "red";
-            yearOutput.innerHTML += ""
-    
-        }
+        yearError.innerHTML = "This field cannot be empty"
+        yearEl.style.borderColor = "red";
+        yearLab.style.color = "red";
+        yearOutput.innerHTML += ""
     }
 
     dayErr()
@@ -85,7 +105,7 @@ function run(){
         dayErr()
         monthErr()
         yearErr()
-    // }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
+    } // else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
     //     yearOutput.innerHTML += ""
     //     monthOutput.innerHTML += ""
     //     dayOutput.innerHTML += ""  
