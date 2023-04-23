@@ -144,7 +144,7 @@ function run(){
         }else if (monthEl.value < currMonth && dayEl.value > currDay && yearEl.value <= currYear){
             yearOutput.innerHTML = currYear - yearEl.value 
             monthOutput.innerHTML = currMonth - monthEl.value 
-            dayOutput.innerHTML = 31 - dayEl.value - currDay
+            dayOutput.innerHTML =  31 - dayEl.value - currDay 
         }else if(monthEl.value === currMonth && dayEl.value > currDay && yearEl.value <= currYear ){
             yearOutput.innerHTML = currYear - yearEl.value
             monthOutput.innerHTML = currMonth - monthEl.value
@@ -158,5 +158,19 @@ function run(){
     }
  
      validInput()
+
+    //  function convert(){
+    //     if (monthOutput.innerHTML === 12){
+    //         yearOutput.innerHTML += 1
+    //     };
+    //     if (dayEl.value = 4 || 9 || 6 || 11 && dayOutput.innerHTML === 30){
+    //         monthOutput.innerHTML += 1
+    //     }else if(dayEl.value >= 28 && monthEl.value === 2){
+    //         monthOutput.innerHTML += 1
+    //     }
+    //  }
+
+    //  convert()
 }
+
  
