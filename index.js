@@ -32,71 +32,20 @@ function run(){
     const monthEl = document.getElementById("month-el")
     const yearEl = document.getElementById("year-el")
 
-    // function dayErr(){
-    //     if(dayEl.value <= 31){
-    //         dayError.innerHTML = ""
-    //      }else if (dayEl.value === ""){
-    //         dayError.innerHTML = "This field cannot be blank"
-    //         dayEl.style.borderColor = "red";
-    //         dayLab.style.color = "red";
-    //         dayOutput.innerHTML += ""
-    //      }else  {
-    //        dayError.innerHTML = "Must be a valid day"
-    //        dayEl.style.borderColor = "red";
-    //        dayLab.style.color = "red";
-    //        dayOutput.innerHTML += ""
-    //      }
-    // }
     
-    // function monthErr(){
-    //     if (monthEl.value <= 12){
-    //         monthError.innerHTML = ""
-    //     }else if(monthEl.value === ""){
-    //         monthError.innerHTML = "This field cannot be blank"
-    //         monthEl.style.borderColor = "red";
-    //         monthLab.style.color = "red";
-    //         monthOutput.innerHTML += ""
-    //     }else{
-    //         monthError.innerHTML = "Must be a valid month"
-    //         monthEl.style.borderColor = "red";
-    //         monthLab.style.color = "red";
-    //         monthOutput.innerHTML += ""
-    //     }
-    // }
-    
-    // function yearErr(){
-    //     if (yearEl.value <= currYear){
-    //         yearError.innerHTML = ""
-    //     }else if (yearEl.value === ""){
-    //         yearError.innerHTML = "This field cannot be empty"
-    //         yearEl.style.borderColor = "red";
-    //         yearLab.style.color = "red";
-    //         yearOutput.innerHTML += ""
-    //     }
-    //     else {
-    //         yearError.innerHTML = "Must be in the past"
-    //         yearEl.style.borderColor = "red";
-    //         yearLab.style.color = "red";
-    //         yearOutput.innerHTML += ""
-    
-    //     }
-    // }
     function dayErr(){
-        
         dayEl.style.borderColor = "red";
         dayLab.style.color = "red";
         dayOutput.innerHTML += "" 
     }
 
-    function monthErr(){
-        
+    function monthErr(){ 
         monthEl.style.borderColor = "red";
         monthLab.style.color = "red";
         monthOutput.innerHTML += ""
     }
 
     function yearErr(){
-        
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
         yearOutput.innerHTML += ""
@@ -137,6 +86,7 @@ function run(){
         }
     }
     emptyInput()
+
     function invalidInput(){
         if (dayEl.value > 31 && monthEl.value > 12 && yearEl.value > currYear){
             dayErr()
@@ -174,36 +124,39 @@ function run(){
 
     invalidInput()
     
+    function validInput(){
+        if (dayEl.value === currDay && monthEl.value === currMonth && yearEl.value <= currYear){
+            yearOutput.innerHTML = currYear - yearEl.value + 1;
+            monthOutput.innerHTML = monthEl.value - currMonth ;
+            dayOutput.innerHTML = 0; 
+        }else if (monthEl.value < currMonth && dayEl.value <= currDay && yearEl.value <= currYear){
+            yearOutput.innerHTML = currYear - yearEl.value;
+            monthOutput.innerHTML = currMonth - monthEl.value + 1
+            dayOutput.innerHTML = currDay - dayEl.value; 
+        }else if (monthEl.value > currMonth && dayEl.value > currDay && yearEl.value <= currYear){
+            yearOutput.innerHTML = currYear - yearEl.value - 1 
+            monthOutput.innerHTML = 12 - monthEl.value + currMonth 
+            dayOutput.innerHTML =  31 - dayEl.value + currDay
+        }else if (monthEl.value > currMonth && dayEl.value < currDay && yearEl.value <= currYear){
+            yearOutput.innerHTML = currYear - yearEl.value -1
+            monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
+            dayOutput.innerHTML = currDay - dayEl.value
+        }else if (monthEl.value < currMonth && dayEl.value > currDay && yearEl.value <= currYear){
+            yearOutput.innerHTML = currYear - yearEl.value 
+            monthOutput.innerHTML = currMonth - monthEl.value 
+            dayOutput.innerHTML = 31 - dayEl.value - currDay
+        }else if(monthEl.value === currMonth && dayEl.value > currDay && yearEl.value <= currYear ){
+            yearOutput.innerHTML = currYear - yearEl.value
+            monthOutput.innerHTML = currMonth - monthEl.value
+            dayOutput.innerHTML = 31 - dayEl.value - currDay
+        }else {
+            yearOutput.innerHTML = currYear - yearEl.value
+            monthOutput.innerHTML = currMonth - monthEl.value + 1
+            dayOutput.innerHTML = currDay - dayEl.value
+        }
     
-    // else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
-    //     yearOutput.innerHTML += ""
-    //     monthOutput.innerHTML += ""
-    //     dayOutput.innerHTML += ""  
-    // }else if (dayEl.value === currDay && monthEl.value === currMonth){
-    //     yearOutput.innerHTML = currYear - yearEl.value + 1;
-    //     monthOutput.innerHTML = monthEl.value - currMonth ;
-    //     dayOutput.innerHTML = 0; 
-    // }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
-    //     yearOutput.innerHTML = currYear - yearEl.value;
-    //     monthOutput.innerHTML = currMonth - monthEl.value + 1
-    //     dayOutput.innerHTML = currDay - dayEl.value; 
-    // }else if (monthEl.value > currMonth && dayEl.value > currDay){
-    //     yearOutput.innerHTML = currYear - yearEl.value - 1 
-    //     monthOutput.innerHTML = 12 - monthEl.value + currMonth 
-    //     dayOutput.innerHTML =  31 - dayEl.value + currDay
-    // }else if (monthEl.value > currMonth && dayEl.value < currDay){
-    //     yearOutput.innerHTML = currYear - yearEl.value -1
-    //     monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
-    //     dayOutput.innerHTML = currDay - dayEl.value
-    // }else if (monthEl.value < currMonth && dayEl.value > currDay){
-    //     yearOutput.innerHTML = currYear - yearEl.value
-    //     monthOutput.innerHTML = currMonth - monthEl.value 
-    //     dayOutput.innerHTML = dayEl.value - currDay
-    // }else if(monthEl.value === currMonth && dayEl.value > currDay){
-    //     yearOutput.innerHTML = currYear - yearEl.value
-    //     monthOutput.innerHTML = currMonth - monthEl.value
-    //     dayOutput.innerHTML = currDay
-    // }
-
+    }
+ 
+     validInput()
 }
  
