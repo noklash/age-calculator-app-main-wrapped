@@ -17,7 +17,8 @@ let currYear = currTime.getFullYear()
 let currMonth = currTime.getMonth()
 let currDay = currTime.getDate()
 
-let blankErrMsg = "This field cannot \nbe empty"
+let blankErrMsg = "This field cannot be empty"
+
 
 
 
@@ -78,21 +79,21 @@ function run(){
     //     }
     // }
     function dayErr(){
-        dayError.innerHTML = blankErrMsg
+        
         dayEl.style.borderColor = "red";
         dayLab.style.color = "red";
         dayOutput.innerHTML += "" 
     }
 
     function monthErr(){
-        monthError.innerHTML = blankErrMsg
+        
         monthEl.style.borderColor = "red";
         monthLab.style.color = "red";
         monthOutput.innerHTML += ""
     }
 
     function yearErr(){
-        yearError.innerHTML = blankErrMsg
+        
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
         yearOutput.innerHTML += ""
@@ -103,25 +104,39 @@ function run(){
             dayErr()
             monthErr()
             yearErr()
+            dayError.innerHTML = blankErrMsg
+            monthError.innerHTML = blankErrMsg
+            yearError.innerHTML = blankErrMsg
         }else if(dayEl.value === "" && monthEl.value === ""){
             dayErr()
             monthErr()
+            dayError.innerHTML = blankErrMsg
+            monthError.innerHTML = blankErrMsg
         }else if(dayEl.value === "" && yearEl.value === ""){
             dayErr()
             yearErr()
+            dayError.innerHTML = blankErrMsg
+            yearError.innerHTML = blankErrMsg
         } else if (monthEl.value === "" && yearEl.value === ""){
             monthErr()
             yearErr()
+            monthError.innerHTML = blankErrMsg
+            yearError.innerHTML = blankErrMsg
         }else if(dayEl.value === ""){
             dayErr()
+            dayError.innerHTML = blankErrMsg
         }else if(monthEl.value === ""){
             monthErr() 
+            monthError.innerHTML = blankErrMsg
         }else if(yearEl.value === ""){
             yearErr()
+            yearError.innerHTML = blankErrMsg
         }
     }
     
-    
+    function invalidInput(){
+
+    }
     
     
     
