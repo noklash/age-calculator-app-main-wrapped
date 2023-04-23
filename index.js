@@ -17,7 +17,7 @@ let currYear = currTime.getFullYear()
 let currMonth = currTime.getMonth()
 let currDay = currTime.getDate()
 
-
+let blankErrMsg = "This field cannot \nbe empty"
 
 
 
@@ -78,34 +78,54 @@ function run(){
     //     }
     // }
     function dayErr(){
-        dayError.innerHTML = "This field cannot be blank"
+        dayError.innerHTML = blankErrMsg
         dayEl.style.borderColor = "red";
         dayLab.style.color = "red";
         dayOutput.innerHTML += "" 
     }
 
     function monthErr(){
-        monthError.innerHTML = "This field cannot be blank"
+        monthError.innerHTML = blankErrMsg
         monthEl.style.borderColor = "red";
         monthLab.style.color = "red";
         monthOutput.innerHTML += ""
     }
 
     function yearErr(){
-        yearError.innerHTML = "This field cannot be empty"
+        yearError.innerHTML = blankErrMsg
         yearEl.style.borderColor = "red";
         yearLab.style.color = "red";
         yearOutput.innerHTML += ""
     }
 
-    dayErr()
-    monthErr()
-    yearErr()
-    if (dayEl.value === "" || monthEl.value === "" || yearEl.value === ""){
-        dayErr()
-        monthErr()
-        yearErr()
-    } // else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
+    function emptyInput(){
+        if (dayEl.value === "" && monthEl.value === "" && yearEl.value === ""){
+            dayErr()
+            monthErr()
+            yearErr()
+        }else if(dayEl.value === "" && monthEl.value === ""){
+            dayErr()
+            monthErr()
+        }else if(dayEl.value === "" && yearEl.value === ""){
+            dayErr()
+            yearErr()
+        } else if (monthEl.value === "" && yearEl.value === ""){
+            monthErr()
+            yearErr()
+        }else if(dayEl.value === ""){
+            dayErr()
+        }else if(monthEl.value === ""){
+            monthErr() 
+        }else if(yearEl.value === ""){
+            yearErr()
+        }
+    }
+    
+    
+    
+    
+    
+    // else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
     //     yearOutput.innerHTML += ""
     //     monthOutput.innerHTML += ""
     //     dayOutput.innerHTML += ""  
