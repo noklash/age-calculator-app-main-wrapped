@@ -145,10 +145,34 @@ function run(){
             dayError.innerHTML = invdDay
             monthError.innerHTML = invdMonth
             yearError.innerHTML = invdYear  
+        }else if(dayEl.value > 31 && monthEl.value > 12){
+            dayErr()
+            monthErr()
+            dayError.innerHTML = invdDay
+            monthError.innerHTML = invdMonth
+        }else if(dayEl.value > 31 && yearEl.value > currYear){
+            dayErr()
+            yearErr()
+            dayError.innerHTML = invdDay
+            yearError.innerHTML = invdYear
+        } else if (monthEl.value > 12 && yearEl.value > currYear){
+            monthErr()
+            yearErr()
+            monthError.innerHTML = invdMonth
+            yearError.innerHTML = invdYear
+        }else if(dayEl.value > 31){
+            dayErr()
+            dayError.innerHTML = invdDay
+        }else if(monthEl.value > 12){
+            monthErr() 
+            monthError.innerHTML = invdMonth
+        }else if(yearEl.value > currYear){
+            yearErr()
+            yearError.innerHTML = invdYear
         }
-
     }
     
+    invalidInput()
     
     
     // else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
