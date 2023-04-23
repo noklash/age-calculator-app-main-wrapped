@@ -18,6 +18,9 @@ let currMonth = currTime.getMonth()
 let currDay = currTime.getDate()
 
 let blankErrMsg = "This field cannot be empty"
+let invdMonth = "Must be a valid month"
+let invdDay = "Must be a valid day"
+let invdYear = "Must be a valid year"
 
 
 
@@ -133,8 +136,16 @@ function run(){
             yearError.innerHTML = blankErrMsg
         }
     }
-    
+    emptyInput()
     function invalidInput(){
+        if (dayEl.value > 31 && monthEl.value > 12 && yearEl.value > currYear){
+            dayErr()
+            monthErr()
+            yearErr()
+            dayError.innerHTML = invdDay
+            monthError.innerHTML = invdMonth
+            yearError.innerHTML = invdYear  
+        }
 
     }
     
