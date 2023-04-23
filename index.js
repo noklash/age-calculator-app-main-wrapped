@@ -85,35 +85,35 @@ function run(){
         dayErr()
         monthErr()
         yearErr()
-    }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
-        yearOutput.innerHTML += ""
-        monthOutput.innerHTML += ""
-        dayOutput.innerHTML += ""  
-    }else if (dayEl.value === currDay && monthEl.value === currMonth){
-        yearOutput.innerHTML = currYear - yearEl.value + 1;
-        monthOutput.innerHTML = monthEl.value - currMonth ;
-        dayOutput.innerHTML = 0; 
-    }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
-        yearOutput.innerHTML = currYear - yearEl.value;
-        monthOutput.innerHTML = currMonth - monthEl.value + 1
-        dayOutput.innerHTML = currDay - dayEl.value; 
-    }else if (monthEl.value > currMonth && dayEl.value > currDay){
-        yearOutput.innerHTML = currYear - yearEl.value - 1 
-        monthOutput.innerHTML = 12 - monthEl.value + currMonth 
-        dayOutput.innerHTML =  31 - dayEl.value + currDay
-    }else if (monthEl.value > currMonth && dayEl.value < currDay){
-        yearOutput.innerHTML = currYear - yearEl.value -1
-        monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
-        dayOutput.innerHTML = currDay - dayEl.value
-    }else if (monthEl.value < currMonth && dayEl.value > currDay){
-        yearOutput.innerHTML = currYear - yearEl.value
-        monthOutput.innerHTML = currMonth - monthEl.value 
-        dayOutput.innerHTML = dayEl.value - currDay
-    }else if(monthEl.value === currMonth && dayEl.value > currDay){
-        yearOutput.innerHTML = currYear - yearEl.value
-        monthOutput.innerHTML = currMonth - monthEl.value
-        dayOutput.innerHTML = currDay
-    }
+    // }else if(monthEl.value > 12 || yearEl.value > currYear || dayEl.value > 31 ){
+    //     yearOutput.innerHTML += ""
+    //     monthOutput.innerHTML += ""
+    //     dayOutput.innerHTML += ""  
+    // }else if (dayEl.value === currDay && monthEl.value === currMonth){
+    //     yearOutput.innerHTML = currYear - yearEl.value + 1;
+    //     monthOutput.innerHTML = monthEl.value - currMonth ;
+    //     dayOutput.innerHTML = 0; 
+    // }else if (monthEl.value <= currMonth && dayEl.value <= currDay){
+    //     yearOutput.innerHTML = currYear - yearEl.value;
+    //     monthOutput.innerHTML = currMonth - monthEl.value + 1
+    //     dayOutput.innerHTML = currDay - dayEl.value; 
+    // }else if (monthEl.value > currMonth && dayEl.value > currDay){
+    //     yearOutput.innerHTML = currYear - yearEl.value - 1 
+    //     monthOutput.innerHTML = 12 - monthEl.value + currMonth 
+    //     dayOutput.innerHTML =  31 - dayEl.value + currDay
+    // }else if (monthEl.value > currMonth && dayEl.value < currDay){
+    //     yearOutput.innerHTML = currYear - yearEl.value -1
+    //     monthOutput.innerHTML = 12 - monthEl.value + currMonth + 1
+    //     dayOutput.innerHTML = currDay - dayEl.value
+    // }else if (monthEl.value < currMonth && dayEl.value > currDay){
+    //     yearOutput.innerHTML = currYear - yearEl.value
+    //     monthOutput.innerHTML = currMonth - monthEl.value 
+    //     dayOutput.innerHTML = dayEl.value - currDay
+    // }else if(monthEl.value === currMonth && dayEl.value > currDay){
+    //     yearOutput.innerHTML = currYear - yearEl.value
+    //     monthOutput.innerHTML = currMonth - monthEl.value
+    //     dayOutput.innerHTML = currDay
+    // }
 
 }
  
