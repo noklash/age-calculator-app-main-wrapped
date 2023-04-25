@@ -146,7 +146,11 @@ function run(){
     invalidInput()
     
     function validInput(){
-        if (dayEl.value === currDay && monthEl.value === currMonth && yearEl.value <= currYear){
+        if(dayEl.value === "" || monthEl.value === "" || yearEl.value === "" ){
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += ""
+        }else if (dayEl.value === currDay && monthEl.value === currMonth && yearEl.value <= currYear){
             yearOutput.innerHTML = currYear - yearEl.value + 1;
             monthOutput.innerHTML = monthEl.value - currMonth ;
             dayOutput.innerHTML = 0; 
@@ -175,23 +179,13 @@ function run(){
             monthOutput.innerHTML = currMonth - monthEl.value + 1
             dayOutput.innerHTML = currDay - dayEl.value
         }
-    
     }
- 
-     validInput()
-
-    //  function convert(){
-    //     if (monthOutput.innerHTML === 12){
-    //         yearOutput.innerHTML += 1
-    //     };
-    //     if (dayEl.value = 4 || 9 || 6 || 11 && dayOutput.innerHTML === 30){
-    //         monthOutput.innerHTML += 1
-    //     }else if(dayEl.value >= 28 && monthEl.value === 2){
-    //         monthOutput.innerHTML += 1
-    //     }
-    //  }
-
-    //  convert()
+    
+    validInput()
 }
+ 
+
+    
+
 
  
