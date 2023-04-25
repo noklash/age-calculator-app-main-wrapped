@@ -17,7 +17,7 @@ let currYear = currTime.getFullYear()
 let currMonth = currTime.getMonth()
 let currDay = currTime.getDate()
 
-let blankErrMsg = "This field cannot be empty"
+let blankErrMsg = "This field <br>cannot be empty"
 let invdMonth = "Must be a valid month"
 let invdDay = "Must be a valid day"
 let invdYear = "Must be in the past"
