@@ -144,7 +144,7 @@ function run(){
         }else if (monthEl.value < currMonth && dayEl.value > currDay && yearEl.value <= currYear){
             yearOutput.innerHTML = currYear - yearEl.value 
             monthOutput.innerHTML = currMonth - monthEl.value 
-            dayOutput.innerHTML =  31 - dayEl.value - currDay 
+            dayOutput.innerHTML =  31 - dayEl.value - ( - currDay )
         }else if(monthEl.value === currMonth && dayEl.value > currDay && yearEl.value <= currYear ){
             yearOutput.innerHTML = currYear - yearEl.value
             monthOutput.innerHTML = currMonth - monthEl.value
