@@ -94,31 +94,52 @@ function run(){
             yearErr()
             dayError.innerHTML = invdDay
             monthError.innerHTML = invdMonth
-            yearError.innerHTML = invdYear  
+            yearError.innerHTML = invdYear 
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }else if(dayEl.value > 31 && monthEl.value > 12){
             dayErr()
             monthErr()
             dayError.innerHTML = invdDay
             monthError.innerHTML = invdMonth
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }else if(dayEl.value > 31 && yearEl.value > currYear){
             dayErr()
             yearErr()
             dayError.innerHTML = invdDay
             yearError.innerHTML = invdYear
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         } else if (monthEl.value > 12 && yearEl.value > currYear){
             monthErr()
             yearErr()
             monthError.innerHTML = invdMonth
             yearError.innerHTML = invdYear
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }else if(dayEl.value > 31){
             dayErr()
             dayError.innerHTML = invdDay
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }else if(monthEl.value > 12){
             monthErr() 
             monthError.innerHTML = invdMonth
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }else if(yearEl.value > currYear){
             yearErr()
             yearError.innerHTML = invdYear
+            dayOutput.innerHTML += ""
+            monthOutput.innerHTML += ""
+            yearOutput.innerHTML += "" 
         }
     }
 
